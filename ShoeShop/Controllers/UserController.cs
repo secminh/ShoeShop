@@ -151,13 +151,14 @@ namespace ShoeShop.Controllers
                 else
                 {
                     var user = new User();
-                    user.UserName = Encryptor.MD5Hash(model.UserName);
+                    user.UserName = model.UserName;
+                    user.Password = Encryptor.MD5Hash(model.Password);
                     user.Name = model.Name;
-                    user.Password = model.Password;
                     user.Phone = model.Phone;
                     user.Email = model.Email;
                     user.Address = model.Address;
                     user.CreatedDate = DateTime.Now;
+                    user.GroupID = "MEMBER";
                     user.Status = true;
                     //dao.Insert(user);
                     var resulf = dao.Insert(user);

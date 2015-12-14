@@ -22,6 +22,7 @@ namespace Model.Dao
         }
         public long Insert(Product entity)
         {
+            entity.CreatedDate = DateTime.Now;
             db.Products.Add(entity);
             db.SaveChanges();
             return entity.ID;
@@ -37,6 +38,7 @@ namespace Model.Dao
                 product.CategoryID = entity.CategoryID;
                 product.Image = entity.Image;
                 product.TopHop = entity.TopHop;
+                product.ModifiedDate = DateTime.Now;
                 db.SaveChanges();
                 return true;
 
