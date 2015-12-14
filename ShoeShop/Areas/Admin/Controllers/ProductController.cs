@@ -54,6 +54,7 @@ namespace ShoeShop.Areas.Admin.Controllers
         }
         public ActionResult Edit(int id)
         {
+            SetViewBag();
             var product = new ProductDao().ViewDetail(id);
             return View(product);
         }

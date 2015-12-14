@@ -13,6 +13,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
+        <h4>Nhập thông tin danh mục</h4>
         <hr />
         @Html.ValidationSummary(true)
 
@@ -33,6 +34,22 @@
         </div>
 
         <div class="form-group">
+            @Html.LabelFor(model => model.ParentID, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ParentID)
+                @Html.ValidationMessageFor(model => model.ParentID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DisplayOrder, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DisplayOrder)
+                @Html.ValidationMessageFor(model => model.DisplayOrder)
+            </div>
+        </div>
+
+        <div class="form-group">
             @Html.LabelFor(model => model.Status, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Status)
@@ -48,5 +65,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Danh sách", "Index")
 </div>

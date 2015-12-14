@@ -5,7 +5,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layouts.cshtml";
 }
 @section header{
-    Tạo mới sản phẩm
+    THÊM MỚI SẢN PHẨM
 }
 @section jsFooter{
     <script>
@@ -27,7 +27,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Product</h4>
+        <h4>Nhập thông tin sản phẩm</h4>
         <hr />
         @Html.ValidationSummary(true)
 
@@ -210,7 +210,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Tạo mới" class="btn btn-default" />
             </div>
         </div>
     </div>

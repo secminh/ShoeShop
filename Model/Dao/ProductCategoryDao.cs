@@ -35,6 +35,9 @@ namespace Model.Dao
                 var product = db.ProductCategories.Find(entity.ID);
                 product.Name = entity.Name;
                 product.MetaTitle = entity.MetaTitle;
+                product.DisplayOrder = entity.DisplayOrder;
+                product.ParentID = entity.ParentID;
+                product.Status = entity.Status;
                 db.SaveChanges();
                 return true;
 
