@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using PagedList;
 namespace Model.Dao
 {
     public class ProductCategoryDao
@@ -32,9 +32,9 @@ namespace Model.Dao
         {
             try
             {
-                var product = db.Products.Find(entity.ID);
+                var product = db.ProductCategories.Find(entity.ID);
                 product.Name = entity.Name;
-                product.MetaTitle = entity.MetaTitle;    
+                product.MetaTitle = entity.MetaTitle;
                 db.SaveChanges();
                 return true;
 
@@ -43,6 +43,25 @@ namespace Model.Dao
             {
                 return false;
             }
+        }
+        public IEnumerable<ProductCategory> ListAllPaging(int page, int pageSize)
+        {
+            return db.ProductCategories.OrderByDescending(x => x.CreatedDate).ToPagedList(page, pageSize);
+        }
+        public bool Detele(int id)
+        {
+            try
+            {
+                var product = db.ProductCategories.Find(id);
+                db.ProductCategories.Remove(product);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
         }
     }
 }

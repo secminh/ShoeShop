@@ -227,7 +227,7 @@
     <div class="navbar-default sidebar" role="navigation">
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
-                <li class="sidebar-search">
+                @*<li class="sidebar-search">
                     <div class="input-group custom-search-form">
                         <input type="text" class="form-control" placeholder="Search...">
                         <span class="input-group-btn">
@@ -236,16 +236,16 @@
                             </button>
                         </span>
                     </div>
-                    <!-- /input-group -->
+                   
+                </li>*@
+                <li>
+                    <a href="/Admin/Home/Index"><i class="fa fa-dashboard fa-fw"></i>Quản Lý</a>
                 </li>
                 <li>
-                    <a href="/Admin/Home/Index"><i class="fa fa-dashboard fa-fw"></i> Trang chủ</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-user fa-fw"></i> Quản lý hệ thống<span class="fa arrow "></span></a>
+                    <a href="#"><i class="fa fa-user fa-fw"></i>Người dùng<span class="fa arrow "></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="/Admin/UserGroup/Index">Nhóm người dùng</a>
+                            <a href="/Admin/User/Create">Thêm user</a>
                         </li>
                         <li>
                             <a href="/Admin/User/Index">User</a>
@@ -255,7 +255,7 @@
                 </li>
 
                 <li>
-                    <a href="#"><i class="fa fa-bell fa-fw"></i> Sản phẩm<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-bell fa-fw"></i>Sản phẩm<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
                             <a href="/Admin/Product/Create">Thêm sản phẩm</a>
@@ -268,21 +268,20 @@
                 </li>
 
                 <li>
-                    <a href="#"><i class="fa fa-comment fa-fw"></i> Tin Tức<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-comment fa-fw"></i>Danh mục<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="/Admin/Category/Index">Danh mục</a>
+                            <a href="/Admin/ProductCategory/Create">Thêm Danh mục</a>
                         </li>
                         <li>
-                            <a href="/Admin/Content/Index">Tin tức</a>
+                            <a href="/Admin/ProductCategory/Index">Danh sách</a>
                         </li>
                     </ul>
-                    <!-- /.nav-second-level -->
                 </li>
 
 
 
-                <li>
+                @*<li>
                     <a href="#"><i class="fa fa-gear fa-fw"></i> Quản Lý chung<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
@@ -301,8 +300,8 @@
                             <a href="/Admin/Footer/Index">Phản hồi</a>
                         </li>
                     </ul>
-                    <!-- /.nav-second-level -->
-                </li>
+                   
+                </li>*@
 
             </ul>
         </div>

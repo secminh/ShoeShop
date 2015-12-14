@@ -66,9 +66,9 @@ namespace ShoeShop.Areas.Admin.Controllers
                 var result = dao.Update(product);
                 if (result)
                 {
-                    
-                    return RedirectToAction("Index", "Product");
                     SetAlert("Cập nhật sản phẩm thành công", "success");
+                    return RedirectToAction("Index", "Product");
+                    
                 }
                 else
                 {

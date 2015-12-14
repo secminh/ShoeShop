@@ -5,7 +5,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layouts.cshtml";
 }
 @section header{
-    Danh Sách sản phẩm
+    QUẢN LÝ USER
 }
 @section jsFooter{
     <script src="/assets/admin/js/controller/userController.js"></script>
@@ -15,7 +15,7 @@
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                Danh sách sản ph
+                Danh sách sản người dùng
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
@@ -41,6 +41,7 @@
                                 <th>Tài khoản</th>
                                 <th>Tên</th>
                                 <th>Email</th>
+                                <th>Quyền</th>
                                 <th>Trạng thái</th>
                                 <th>Thao tác</th>
                             </tr>
@@ -53,6 +54,7 @@
                                     <td>@item.UserName</td>
                                     <td>@item.Name</td>
                                     <td>@item.Email</td>
+                                    <td>@item.GroupID</td>
                                     <td><a href="#" class="btn-active" data-id="@item.ID">@(item.Status ? "Kích hoạt" : "Khóa")</a></td>
                                     <td>
                                         <a href="/Admin/User/Edit/@item.ID ">Sửa</a>

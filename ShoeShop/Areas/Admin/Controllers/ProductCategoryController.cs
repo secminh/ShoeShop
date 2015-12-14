@@ -13,9 +13,12 @@ namespace ShoeShop.Areas.Admin.Controllers
     {
         //
         // GET: /Admin/ProductCategory/
-        public ActionResult Index()
+        public ActionResult Index(int page = 1, int pageSize = 5)
         {
-            return View();
+            var dao = new ProductCategoryDao();
+            var model = dao.ListAllPaging(page, pageSize);
+
+            return View(model);
         }
         [HttpGet]
         public ActionResult Create()
@@ -55,9 +58,9 @@ namespace ShoeShop.Areas.Admin.Controllers
                 var result = dao.Update(product);
                 if (result)
                 {
-
+                    SetAlert("Cập nhật danh mục thành công", "success");
                     return RedirectToAction("Index", "ProductCategory");
-                    SetAlert("Cập nhật sản phẩm thành công", "success");
+                    
                 }
                 else
                 {
@@ -66,6 +69,13 @@ namespace ShoeShop.Areas.Admin.Controllers
             }
             return View("Index");
 
+        }
+        [HttpDelete]
+        public ActionResult Delete(int id)
+        {
+            new ProductCategoryDao().Detele(id);
+
+            return RedirectToAction("Index");
         }
 
 	}

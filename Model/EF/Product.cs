@@ -61,7 +61,7 @@
         public string MetaDescriptions { get; set; }
         [Display(Name = "Trạng thái")]
         public bool Status { get; set; }
-
+        [Display(Name = "Hàng HOT")]
         public DateTime? TopHop { get; set; }
 
         public int? ViewCount { get; set; }
