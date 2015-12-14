@@ -1,0 +1,30 @@
+C:\Users\Minh\Documents\Visual Studio 2013\Projects\ShoeShop\Model\bin\Debug\Model.dll.config
+C:\Users\Minh\Documents\Visual Studio 2013\Projects\ShoeShop\Model\bin\Debug\Model.dll
+C:\Users\Minh\Documents\Visual Studio 2013\Projects\ShoeShop\Model\bin\Debug\Model.pdb
+C:\Users\Minh\Documents\Visual Studio 2013\Projects\ShoeShop\Model\bin\Debug\EntityFramework.dll
+C:\Users\Minh\Documents\Visual Studio 2013\Projects\ShoeShop\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Minh\Documents\Visual Studio 2013\Projects\ShoeShop\Model\bin\Debug\EntityFramework.xml
+C:\Users\Minh\Documents\Visual Studio 2013\Projects\ShoeShop\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Minh\Documents\Visual Studio 2013\Projects\ShoeShop\Model\obj\Debug\Model.dll
+C:\Users\Minh\Documents\Visual Studio 2013\Projects\ShoeShop\Model\obj\Debug\Model.pdb
+C:\Users\Minh\Documents\Visual Studio 2013\Projects\ShoeShop\Model\bin\Debug\PagedList.dll
+C:\Users\Minh\Documents\Visual Studio 2013\Projects\ShoeShop\Model\bin\Debug\PagedList.Mvc.dll
+C:\Users\Minh\Documents\Visual Studio 2013\Projects\ShoeShop\Model\bin\Debug\PagedList.xml
+C:\Users\Minh\Documents\Visual Studio 2013\Projects\ShoeShop\Model\bin\Debug\PagedList.Mvc.xml
+C:\Users\Minh\Documents\Visual Studio 2013\Projects\ShoeShop\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\Minh\Desktop\abc\ShoeShop\Model\bin\Debug\Model.dll.config
+C:\Users\Minh\Desktop\abc\ShoeShop\Model\bin\Debug\Model.dll
+C:\Users\Minh\Desktop\abc\ShoeShop\Model\bin\Debug\Model.pdb
+C:\Users\Minh\Desktop\abc\ShoeShop\Model\bin\Debug\EntityFramework.dll
+C:\Users\Minh\Desktop\abc\ShoeShop\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Minh\Desktop\abc\ShoeShop\Model\bin\Debug\PagedList.dll
+C:\Users\Minh\Desktop\abc\ShoeShop\Model\bin\Debug\PagedList.Mvc.dll
+C:\Users\Minh\Desktop\abc\ShoeShop\Model\bin\Debug\EntityFramework.xml
+C:\Users\Minh\Desktop\abc\ShoeShop\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Minh\Desktop\abc\ShoeShop\Model\bin\Debug\PagedList.xml
+C:\Users\Minh\Desktop\abc\ShoeShop\Model\bin\Debug\PagedList.Mvc.xml
+C:\Users\Minh\Desktop\abc\ShoeShop\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\Minh\Desktop\abc\ShoeShop\Model\obj\Debug\Model.dll
+C:\Users\Minh\Desktop\abc\ShoeShop\Model\obj\Debug\Model.pdb
+C:\Users\Minh\Desktop\abc\ShoeShop\Model\bin\Debug\Common.dll
+C:\Users\Minh\Desktop\abc\ShoeShop\Model\bin\Debug\Common.pdb

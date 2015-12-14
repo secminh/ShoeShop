@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Captcha</id>
+    <version>3.0.17.0</version>
+    <title>CAPTCHA</title>
+    <authors>Captcha,  Inc.</authors>
+    <owners>Captcha,  Inc.</owners>
+    <licenseUrl>http://captcha.com/botdetect-license.html?utm_source=nuget&amp;utm_medium=nuget&amp;utm_campaign=3.0.17.0</licenseUrl>
+    <projectUrl>http://captcha.com/asp.net-captcha.html?utm_source=nuget&amp;utm_medium=nuget&amp;utm_campaign=3.0.17.0</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>BotDetect CAPTCHA protects ASP.NET forms from automated spam submissions. Highly customizable, secure and accessible Captcha protection is available for ASP.NET WebForms and ASP.NET MVC web applications.
+
+BotDetect is unique among Captcha solutions in offering many Captcha image and sound styles. While each of them is easily comprehensible to human users, randomly using multiple Captcha generation algorithms makes the Captcha challenge practically impossible to pass automatically. This approach to Captcha security is validated by the BotDetect track record: we have over 2500 paying customers and not one confirmed case of automated Captcha breaking by spammers.
+    
+BotDetect provides an audio Captcha alternative to keep ASP.NET web applications accessible to the blind and other people for whom reading the Captcha code could be a problem, enabling you to make WCAG and Section 508 compliant websites.
+
+Features
+  * 60 secure &amp; readable Captcha image styles
+  * 10 secure &amp; accessible audio Captcha sound styles
+  * Localized Captcha generation, using various Unicode character sets and downloadable multi-language sound pronunciations
+  * Custom Captcha image size, format, color scheme...
+  * Custom Captcha code length, style, character set, timeouts, generated code filtering...
+  * Many other randomization &amp; customization options
+  * Produces XHTML 1.1 Strict, Section 508 and WCAG AAA compliant markup
+  * Visual Studio .NET 2013, 2012, 2010, 2008, 2005 and 2003 Designer support
+  * Medium trust environment support for shared servers
+  * Fully compatible with ASP.NET MVC 5, ASP.NET MVC 4, ASP.NET MVC 3, ASP.NET MVC 2, and ASP.NET MVC 1 applications
+  * Fully compatible with ASP.NET WebForms applications
+  * Fully compatible with ASP.NET Ajax and jQuery Ajax validation
+  * Fully compatible with SharePoint Server / Foundation
+  * Tested in IE, Firefox, Chrome, Safari and Opera browsers released since 2001.
+  * Full support for all Android &amp; iOS devices</description>
+    <summary>BotDetect CAPTCHA protects ASP.NET forms from automated spam submissions.</summary>
+    <copyright>Copyright © Captcha, Inc. (formerly Lanapsoft) 2004-2014</copyright>
+    <tags>captcha botdetect form forms validation nuget-captcha mvc-captcha mvc mvc5 mvc4 mvc3 mvc2 mvc1</tags>
+  </metadata>
+</package>
