@@ -15,7 +15,7 @@ namespace ShoeShop.Controllers
         // GET: /Home/
         public ActionResult Index()
         {
-            ViewBag.Slides = new SlideDao().ListAll();
+            //ViewBag.Slides = new SlideDao().ListAll();
             var productDao = new ProductDao();
             ViewBag.NewProducts = productDao.ListNewProduct(4);
             ViewBag.ListFeatureProducts = productDao.ListFeatureProduct(4);

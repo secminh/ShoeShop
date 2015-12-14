@@ -13,7 +13,8 @@ namespace ShoeShop.Controllers
         // GET: /Product/
         public ActionResult Index()
         {
-            return View();
+            var pr = new ProductDao().ListAll();
+            return View(pr);
         }
         [ChildActionOnly]
         public PartialViewResult ProductCategory()

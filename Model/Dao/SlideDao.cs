@@ -15,10 +15,10 @@ namespace Model.Dao
         {
             db = new ShoeShopDbContext();
         }
-        public List<Slide> ListAll()
-        {
-            return db.Slides.Where(x => x.Status == true).OrderBy(y => y.DisplayOrder).ToList();
-        }
+        //public List<Slide> ListAll()
+        //{
+        //    return db.Slides.Where(x => x.Status == true).OrderBy(y => y.DisplayOrder).ToList();
+        //}
 
     }
 }

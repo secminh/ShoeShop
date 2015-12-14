@@ -37,6 +37,7 @@ namespace Model.Dao
                 product.Description = entity.Description;
                 product.CategoryID = entity.CategoryID;
                 product.Image = entity.Image;
+                product.Price = entity.Price;
                 product.TopHop = entity.TopHop;
                 product.ModifiedDate = DateTime.Now;
                 db.SaveChanges();
