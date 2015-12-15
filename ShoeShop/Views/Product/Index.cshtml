@@ -5,9 +5,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     var listAllProduct = (List<Model.EF.Product>)ViewBag.ListAllProduct;
 }
-
-<h2>Index</h2>
 <div class="section group">
+    <div class="content_top">
+        <div class="heading">
+            <h3>Tất cả sản phẩm</h3>
+        </div>
+        <div class="see">
+            <p><a href="#"></a></p>
+        </div>
+        <div class="clear"></div>
+    </div>
     @foreach (var item in listAllProduct)
     {
         var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
