@@ -42,6 +42,7 @@
         [StringLength(50)]
        
         [Display(Name = "Số điện thoại")]
+        [Range(0, Int32.MaxValue, ErrorMessage=("SĐT phải ở dạng số"))]
         public string Phone { get; set; }
 
         public DateTime? CreatedDate { get; set; }

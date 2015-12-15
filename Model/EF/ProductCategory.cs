@@ -15,12 +15,13 @@
         [StringLength(250)]
         public string Name { get; set; }
         [Display(Name = "Tiêu đề SEO")]
-        [Required(ErrorMessage = ("Nhập tên SEO"))]
+        [Required(ErrorMessage = ("Nhập tiêu đề SEO"))]
         [StringLength(250)]
         public string MetaTitle { get; set; }
-        [Display(Name = "Danh mục gốc")]
+        [Display(Name = "Danh mục cha")]
         public long? ParentID { get; set; }
         [Display(Name = "Thứ tự hiện thị")]
+        [Range(0, Int32.MaxValue, ErrorMessage = ("Thứ tự phải ở dạng số"))]
         public int? DisplayOrder { get; set; }
 
         [StringLength(250)]

@@ -39,6 +39,7 @@ namespace ShoeShop.Models
         public string Email { set; get; }
 
         [Display(Name = "Điện thoại")]
+        [Range(0, Int32.MaxValue, ErrorMessage = ("SĐT phải ở dạng số"))]
         public string Phone { set; get; }
         //[Key]
         //public long ID { get; set; }

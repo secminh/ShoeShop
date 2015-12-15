@@ -34,11 +34,12 @@ namespace ShoeShop.Areas.Admin.Models
 
 
         [StringLength(50)]
-        [Required(ErrorMessage = "Nhập User name")]
-        [EmailAddress(ErrorMessage = "Mail không hợp lệ")]
+        [Required(ErrorMessage = "Nhập Email")]
+        [EmailAddress(ErrorMessage = "Email không hợp lệ")]
         public string Email { get; set; }
 
         [StringLength(50)]
+
         [Display(Name = "Số điện thoại")]
         public string Phone { get; set; }
 

@@ -4,7 +4,9 @@
     var slides = (List<Model.EF.Slide>)ViewBag.Slides;
     var listNewProducts = (List<Model.EF.Product>)ViewBag.NewProducts;
     var listFeatureProducts = (List<Model.EF.Product>)ViewBag.ListFeatureProducts;
+
 }
+@model Model.EF.ProductCategory
 @section slide {
     <div class="header_slide">
         <div class="header_bottom_left">
@@ -100,7 +102,7 @@
             <h3>Sản phẩm mới</h3>
         </div>
         <div class="see">
-            <p><a href="/san-pham">Xem tất cả</a></p>
+            <p><a href="/san-pham">Tất cả sản phẩm</a></p>
         </div>
         <div class="clear"></div>
     </div>
@@ -129,7 +131,7 @@
             <h3>Sản phẩm hot</h3>
         </div>
         <div class="see">
-            <p><a href="/">Xem tất cả</a></p>
+            <p><a href="/san-pham">Tất cả sản phẩm</a></p>
         </div>
         <div class="clear"></div>
     </div>

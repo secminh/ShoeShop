@@ -79,6 +79,10 @@ namespace ShoeShop.Controllers
                 var user = new User();
                 user.Email = email;
                 user.UserName = email;
+
+                user.Password = Encryptor.MD5Hash("123");
+                user.GroupID = "MEMBER"; 
+
                 user.Status = true;
                 user.Name = firstname + " " + middlename + " " + lastname;
                 user.CreatedDate = DateTime.Now;
