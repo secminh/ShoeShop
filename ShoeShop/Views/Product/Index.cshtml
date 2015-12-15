@@ -1,6 +1,5 @@
-﻿
-@{
-    
+﻿@model List<Model.ViewModel.ProductViewModel>
+@{   
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var listAllProduct = (List<Model.EF.Product>)ViewBag.ListAllProduct;
@@ -30,10 +29,7 @@
                 </div>
                 <div class="clear"></div>
             </div>
-        </div>
-        
-        
-        
+        </div>      
     }
 
 </div>

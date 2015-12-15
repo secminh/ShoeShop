@@ -14,11 +14,10 @@ namespace ShoeShop.Areas.Admin.Controllers
     {
         //
         // GET: /Admin/User/
-        public ActionResult Index(string searchString, int page = 1, int pageSize = 5)
+        public ActionResult Index(string searchString, int page = 1, int pageSize = 10)
         {
             var dao = new UserDao();
             var model = dao.ListAllPaging(searchString, page, pageSize);
-            ViewBag.SearchString = searchString;
             return View(model);
         }
         [HttpGet]

@@ -11,10 +11,12 @@ namespace ShoeShop.Controllers
     {
         //
         // GET: /Product/
-        public ActionResult Index(int page = 1, int pageSize = 10)
+        public ActionResult Index()
         {
+
             var product = new ProductDao();
-            ViewBag.ListAllProduct = product.ListAllProduct(page, pageSize);
+            ViewBag.ListAllProduct = product.ListAllProduct(100);
+
             return View();
         }
         [ChildActionOnly]
@@ -23,9 +25,11 @@ namespace ShoeShop.Controllers
             var model = new ProductCategoryDao().ListAll();
             return PartialView(model);
         }
-        public ActionResult Category(long cateId, int page = 1, int pageSize = 1)
+        public ActionResult Category(long cateId, int page = 2, int pageSize = 4)
         {
+      
             var category = new CategoryDao().ViewDetail(cateId);
+
             ViewBag.Category = category;
             int totalRecord = 0;
             var model = new ProductDao().ListByCategoryId(cateId, ref totalRecord, page, pageSize);
@@ -33,7 +37,7 @@ namespace ShoeShop.Controllers
             ViewBag.Total = totalRecord;
             ViewBag.Page = page;
 
-            int maxPage = 10;
+            int maxPage = 5;
             int totalPage = 0;
 
             totalPage = (int)Math.Ceiling((double)(totalRecord / pageSize));
@@ -41,11 +45,10 @@ namespace ShoeShop.Controllers
             ViewBag.MaxPage = maxPage;
             ViewBag.First = 1;
             ViewBag.Last = totalPage;
-
             ViewBag.Next = page + 1;
             ViewBag.Prev = page - 1;
-            return View(model);
 
+            return View(model);
         }
         public ActionResult Detail(long id)
         {
@@ -63,7 +66,7 @@ namespace ShoeShop.Controllers
                 status = true
             }, JsonRequestBehavior.AllowGet);
         }
-        public ActionResult Search(string keyword, int page = 1, int pageSize = 1)
+        public ActionResult Search(string keyword, int page = 1, int pageSize = 4)
         {
             int totalRecord = 0;
             var model = new ProductDao().Search(keyword, ref totalRecord, page, pageSize);
