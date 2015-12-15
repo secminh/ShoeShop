@@ -14,11 +14,11 @@ namespace ShoeShop.Areas.Admin.Controllers
     {
         //
         // GET: /Admin/Product/
-        public ActionResult Index(int page =1, int pageSize = 5)
+        public ActionResult Index(string searchString, int page = 1, int pageSize = 10)
         {
             var dao = new ProductDao();
-            var model = dao.ListAllPaging(page, pageSize);
-            
+            var model = dao.ListAllPaging(searchString, page, pageSize);
+            ViewBag.SearchString = searchString;
             return View(model);
         }
         public void SetViewBag(long? selectedId = null)
@@ -49,6 +49,7 @@ namespace ShoeShop.Areas.Admin.Controllers
                     ModelState.AddModelError("", "Thêm sản phẩm thất bại");
                 }
             }
+            SetViewBag();
             return View("Create");
            
         }
@@ -76,6 +77,7 @@ namespace ShoeShop.Areas.Admin.Controllers
                     ModelState.AddModelError("", " Cập nhật sản phẩm thất bại");
                 }
             }
+            SetViewBag();
             return View("Index");
 
         }

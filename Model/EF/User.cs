@@ -1,4 +1,4 @@
-namespace Model.EF
+﻿namespace Model.EF
 {
     using System;
     using System.Collections.Generic;
@@ -10,11 +10,14 @@ namespace Model.EF
     public partial class User
     {
         public long ID { get; set; }
-
+        
         [StringLength(50)]
+        [Display(Name = "Tên đăng nhập")]
+        [Required(ErrorMessage = "Nhập User name")]
         public string UserName { get; set; }
-
+        
         [StringLength(32)]
+        [Required(ErrorMessage = "Nhập Password")]
         public string Password { get; set; }
 
         [StringLength(20)]
@@ -26,7 +29,9 @@ namespace Model.EF
         [StringLength(50)]
         public string Address { get; set; }
 
+        
         [StringLength(50)]
+        [EmailAddress(ErrorMessage = "Invalid Email Address")]
         public string Email { get; set; }
 
         [StringLength(50)]

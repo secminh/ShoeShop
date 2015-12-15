@@ -20,6 +20,10 @@ namespace Model.Dao
         {
             return db.ProductCategories.Where(x => x.Status == true).ToList();
         }
+        public List<Product> ListAllProduct(int page, int pageSize)
+        {
+            return db.Products.Where(x => x.Status == true).ToList();
+        }
         public long Insert(Product entity)
         {
             entity.CreatedDate = DateTime.Now;
@@ -38,6 +42,7 @@ namespace Model.Dao
                 product.CategoryID = entity.CategoryID;
                 product.Image = entity.Image;
                 product.Price = entity.Price;
+                product.Status = entity.Status;
                 product.TopHop = entity.TopHop;
                 product.ModifiedDate = DateTime.Now;
                 db.SaveChanges();
@@ -49,9 +54,18 @@ namespace Model.Dao
                 return false;
             }
         }
-        public IEnumerable<Product> ListAllPaging(int page, int pageSize)
+        //public IEnumerable<Product> ListAllPaging(int page, int pageSize)
+        //{
+        //    return db.Products.OrderByDescending(x=>x.CreatedDate).ToPagedList(page, pageSize);
+        //}
+        public IEnumerable<Product> ListAllPaging(string searchString, int page, int pageSize)
         {
-            return db.Products.OrderByDescending(x=>x.CreatedDate).ToPagedList(page, pageSize);
+            IQueryable<Product> model = db.Products;
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                model = model.Where(x => x.Name.Contains(searchString) || x.Name.Contains(searchString));
+            }
+            return model.OrderByDescending(x => x.CreatedDate).ToPagedList(page, pageSize);
         }
         public List<Product> ListNewProduct(int top)
         {
@@ -62,7 +76,7 @@ namespace Model.Dao
         /// </summary>
         /// <param name="categoryID"></param>
         /// <returns></returns>
-        public List<ProductViewModel> ListByCategoryId(long categoryID,ref int totalRecord, int pageIndex=1, int pageSize=2)
+        public List<ProductViewModel> ListByCategoryId(long categoryID,ref int totalRecord, int pageIndex=1, int pageSize=4)
         {
             totalRecord = db.Products.Where(x => x.CategoryID == categoryID).Count();
             var model = from a in db.Products

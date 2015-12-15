@@ -33,7 +33,7 @@ namespace ShoeShop.Models
         [Display(Name = "Địa chỉ")]
         public string Address { set; get; }
 
-        [Required(ErrorMessage = "Yêu cầu nhập email")]
+        [EmailAddress(ErrorMessage = "Mail không hợp lệ")]
         [Display(Name = "Email")]
         public string Email { set; get; }
 

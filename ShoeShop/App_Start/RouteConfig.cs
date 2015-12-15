@@ -89,7 +89,7 @@ namespace ShoeShop
             routes.MapRoute(
          name: "Product",
          url: "san-pham",
-         defaults: new { controller = "Product", action = "Indexx", id = UrlParameter.Optional },
+         defaults: new { controller = "Product", action = "Index", id = UrlParameter.Optional },
          namespaces: new[] { "ShoeShop.Controllers" }
            );
 

@@ -11,10 +11,11 @@ namespace ShoeShop.Controllers
     {
         //
         // GET: /Product/
-        public ActionResult Index()
+        public ActionResult Index(int page = 1, int pageSize = 10)
         {
-            var pr = new ProductDao().ListAll();
-            return View(pr);
+            var product = new ProductDao();
+            ViewBag.ListAllProduct = product.ListAllProduct(page, pageSize);
+            return View();
         }
         [ChildActionOnly]
         public PartialViewResult ProductCategory()
@@ -32,7 +33,7 @@ namespace ShoeShop.Controllers
             ViewBag.Total = totalRecord;
             ViewBag.Page = page;
 
-            int maxPage = 5;
+            int maxPage = 10;
             int totalPage = 0;
 
             totalPage = (int)Math.Ceiling((double)(totalRecord / pageSize));

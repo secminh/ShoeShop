@@ -33,7 +33,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
             <div class="col-md-4">
-                @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = "Tên sản phẩm" })
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @*@placeholder = "Tên sản phẩm"*@ })
                 @Html.ValidationMessageFor(model => model.Name)
             </div>
         </div>
@@ -41,7 +41,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Code, new { @class = "control-label col-md-2" })
             <div class="col-md-4">
-                @Html.TextBoxFor(model => model.Code, new { @class = "form-control", @placeholder = "Mã sản phẩm" })
+                @Html.TextBoxFor(model => model.Code, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Code)
             </div>
         </div>
@@ -57,7 +57,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Description, new { @class = "control-label col-md-2" })
             <div class="col-md-4">
-                @Html.TextAreaFor(model => model.Description, new { @class = "form-control", @placeholder = "Mô tả" })
+                @Html.TextAreaFor(model => model.Description, new { @class = "form-control"})
                 @Html.ValidationMessageFor(model => model.Description)
             </div>
         </div>
@@ -82,18 +82,18 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Price, new { @class = "control-label col-md-2" })
             <div class="col-md-4">
-                @Html.TextBoxFor(model => model.Price, new { @class = "form-control", @placeholder = "Giá" })
+                @Html.TextBoxFor(model => model.Price, new { @class = "form-control"})
                 @Html.ValidationMessageFor(model => model.Price)
             </div>
         </div>
 
-        <div class="form-group">
+        @*<div class="form-group">
             @Html.LabelFor(model => model.PromotionPrice, new { @class = "control-label col-md-2" })
             <div class="col-md-4">
-                @Html.TextBoxFor(model => model.PromotionPrice, new { @class = "form-control", @placeholder = "Giá khuyến mãi" })
+                @Html.TextBoxFor(model => model.PromotionPrice, new { @class = "form-control",})
                 @Html.ValidationMessageFor(model => model.PromotionPrice)
             </div>
-        </div>
+        </div>*@
 
         @*<div class="form-group">
                 @Html.LabelFor(model => model.IncludedVAT, new { @class = "control-label col-md-2" })
@@ -123,7 +123,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Detail, new { @class = "control-label col-md-2" })
             <div class="col-md-4">
-                @Html.TextAreaFor(model => model.Detail, new { @class = "form-control", @placeholder = "Chi tiết" })
+                @Html.TextAreaFor(model => model.Detail, new { @class = "form-control"})
                 @Html.ValidationMessageFor(model => model.Detail)
             </div>
         </div>
@@ -195,7 +195,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.TopHop, new { @class = "control-label col-md-2" })
             <div class="col-md-4">
-                @Html.EditorFor(model => model.TopHop, new { @class = "form-control" })
+                @Html.EditorFor(model => model.TopHop, new { @class = "form-control"  })
                 @Html.ValidationMessageFor(model => model.TopHop)
             </div>
         </div>
@@ -217,5 +217,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Danh sách", "Index")
 </div>
