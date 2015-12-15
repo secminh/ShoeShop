@@ -42,12 +42,12 @@ namespace ShoeShop.Areas.Admin.Controllers
                 if (id > 0)
                 {
                     SetAlert("Thêm sản phẩm thành công", "success");
-                    return RedirectToAction("Create", "Product");
-                }
-                 else
-                {
-                    ModelState.AddModelError("", "Thêm sản phẩm thất bại");
-                }
+                    return RedirectToAction("Index", "Product");
+                }            
+            }
+            else
+            {
+                ModelState.AddModelError("", "Thêm sản phẩm thất bại");
             }
             SetViewBag();
             return View("Create");
@@ -72,10 +72,10 @@ namespace ShoeShop.Areas.Admin.Controllers
                     return RedirectToAction("Index", "Product");
                     
                 }
-                else
-                {
-                    ModelState.AddModelError("", " Cập nhật sản phẩm thất bại");
-                }
+            }
+            else
+            {
+                ModelState.AddModelError("", " Cập nhật sản phẩm thất bại");
             }
             SetViewBag();
             return View("Index");

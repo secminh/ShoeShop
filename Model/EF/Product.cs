@@ -11,6 +11,7 @@
     {
         public long ID { get; set; }
         [Display (Name="Tên sản phẩm")]
+        [Required (ErrorMessage=("Bạn chưa nhập tên sản phẩm"))]
         [StringLength(250)]
         public string Name { get; set; }
         [Display(Name = "Mã sản phẩm")]

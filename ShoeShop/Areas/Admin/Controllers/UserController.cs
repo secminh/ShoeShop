@@ -50,7 +50,7 @@ namespace ShoeShop.Areas.Admin.Controllers
             {
                 ModelState.AddModelError("", "Thêm User không thành công");
             }
-            return View("Index");
+            return View("Create");
         }
         [HttpPost]
         public ActionResult Edit(User user)
@@ -75,7 +75,7 @@ namespace ShoeShop.Areas.Admin.Controllers
             {
                 ModelState.AddModelError("", "Cập nhật User không thành công");
             }
-            return View("Index");
+            return View("Edit");
         }
         [HttpDelete]
         public ActionResult Delete(int id)

@@ -76,7 +76,7 @@ namespace Model.Dao
         /// </summary>
         /// <param name="categoryID"></param>
         /// <returns></returns>
-        public List<ProductViewModel> ListByCategoryId(long categoryID, ref int totalRecord, int pageIndex = 1, int pageSize = 2)
+        public List<ProductViewModel> ListByCategoryId(long categoryID, ref int totalRecord, int pageIndex = 1, int pageSize = 5)
         {
             totalRecord = db.Products.Where(x => x.CategoryID == categoryID).Count();
             var model = (from a in db.Products
@@ -112,6 +112,27 @@ namespace Model.Dao
         /// </summary>
         /// <param name="top"></param>
         /// <returns></returns>
+        /// 
+
+
+        //public List<Product> ListByCategoryId(long categoryID, ref int totalRecord, int pageIndex = 1, int pageSize = 2)
+        //{
+        //    totalRecord = db.Products.Where(x => x.CategoryID == categoryID).Count();
+        //    var model = db.Products.Where(x => x.CategoryID == categoryID).OrderByDescending(x => x.CreatedDate).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+        //    return model;
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
         public List<Product> ListFeatureProduct(int top)
         {
             return db.Products.Where(x => x.TopHop != null && x.TopHop > DateTime.Now).OrderByDescending(x => x.CreatedDate).Take(top).ToList();

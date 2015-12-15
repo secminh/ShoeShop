@@ -160,7 +160,7 @@ namespace ShoeShop.Controllers
                     user.CreatedDate = DateTime.Now;
                     user.GroupID = "MEMBER";
                     user.Status = true;
-                    //dao.Insert(user);
+                    dao.Insert(user);
                     var resulf = dao.Insert(user);
                     if(resulf >0)
                     {

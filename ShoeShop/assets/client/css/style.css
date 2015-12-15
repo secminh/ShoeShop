@@ -54,8 +54,9 @@ body {
 
 }
 .headertop_desc{
-	padding:20px 0;
+	padding:25px 0;
 	border-bottom:1px solid #EEE;
+    background-color:whitesmoke;
 }
 .call{
 	float:left;
@@ -251,6 +252,7 @@ body {
 }
 .header_slide{
 	margin-top:10px;
+    background-color:whitesmoke;
 }
 .header_bottom_left{
 	float:left;
@@ -1244,6 +1246,7 @@ body {
 }
 .group {
 	zoom: 1;
+    background-color:white;
 }
 .col {
 	display: block;
