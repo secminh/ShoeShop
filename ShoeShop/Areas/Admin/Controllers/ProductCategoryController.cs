@@ -34,13 +34,13 @@ namespace ShoeShop.Areas.Admin.Controllers
                 long id = dao.Insert(productcate);
                 if (id > 0)
                 {
-                    SetAlert("Thêm sản phẩm thành công", "success");
-                    return RedirectToAction("Create", "ProductCategory");
+                    SetAlert("Thêm danh mục thành công", "success");
+                    return RedirectToAction("Index", "ProductCategory");
                 }
-                else
-                {
-                    ModelState.AddModelError("", "Thêm sản phẩm thất bại");
-                }
+            }
+            else
+            {
+                ModelState.AddModelError("", "Thêm danh mục thất bại");
             }
             return View("Create");
         }

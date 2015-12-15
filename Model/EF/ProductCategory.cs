@@ -11,9 +11,11 @@
     {
         public long ID { get; set; }
         [Display (Name="Tên danh mục")]
+        [Required(ErrorMessage = ("Nhập tên danh mục"))]
         [StringLength(250)]
         public string Name { get; set; }
         [Display(Name = "Tiêu đề SEO")]
+        [Required(ErrorMessage = ("Nhập tên SEO"))]
         [StringLength(250)]
         public string MetaTitle { get; set; }
         [Display(Name = "Danh mục gốc")]

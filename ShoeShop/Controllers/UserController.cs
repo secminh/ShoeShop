@@ -166,6 +166,7 @@ namespace ShoeShop.Controllers
                     {
                         ViewBag.Success = "Đăng kí thành công";
                             model = new RegisterModel();
+                            //return RedirectToAction("Login", "User");
                     }
                     else
                     {
@@ -173,7 +174,7 @@ namespace ShoeShop.Controllers
                     }
                 }
             }
-            return View(model);
+            return View();
         }
 	}
 }
